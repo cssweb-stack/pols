@@ -23,7 +23,8 @@ for f in OUT.rglob('*.html'):
     p=Scan();p.feed(f.read_text());pages[f]=p
 errors=[]
 unit=SHARED/'src/data/units/pols'
-faculty=json.loads((unit/'faculty.json').read_text())
+people=json.loads((unit/'people.json').read_text())
+faculty=[person for person in people if person.get('showInFacultyDirectory')]
 students=json.loads((unit/'graduate-students.json').read_text())
 heroes=json.loads((unit/'heroes.json').read_text())['pages']
 heroes.update(json.loads((unit/'faculty-heroes.json').read_text())['pages'])
@@ -49,8 +50,9 @@ for f,p in pages.items():
 for person in faculty:
     f=OUT/person['url'].lstrip('/');raw=f.read_text()
     if 'profile-sidebar' not in raw or 'profile-biography' not in raw:errors.append(person['name']+': missing shared profile')
-    if person['photo'] not in raw:errors.append(person['name']+': missing temporary portrait')
-    if not (SHARED/'src'/person['photo'].lstrip('/')).exists():errors.append(person['name']+': missing source portrait')
+    if person.get('photo'):
+        if person['photo'] not in raw:errors.append(person['name']+': missing portrait')
+        if not (SHARED/'src'/person['photo'].lstrip('/')).exists():errors.append(person['name']+': missing source portrait')
 cohort=(OUT/'graduate/current-cohort.html').read_text()
 if cohort.count(' graduate-student"')!=len(students):errors.append('Cohort record count')
 for student in students:

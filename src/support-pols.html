@@ -4,10 +4,13 @@ title: "Support POLS"
 description: "This will be the meta description."
 permalink: "/support-pols.html"
 ---
-<div class="page-section"><div class="container content-section"><div class="row content-sidebar gy-4 gx-0 gx-sm-5 gx-lg-5"><div class="col-12 col-lg-9"><h1>Support POLS</h1>
-<p>The Political Science Department Fund is used to sponsor activities such as colloquia and educational/programming events. Contributions also support special funds designed to assist undergraduate and graduate students in their quest for knowledge. <em>Contributions of any size are sincerely appreciated.</em>
+{% from "layouts/content/image-text-row.njk" import imageTextRow %}
+<div class="page-section"><div class="container content-section">{% call imageTextRow('/media/branding/logos/uhf.svg', 230, 59.33, 'University of Hawaiʻi Foundation', true, 'https://www.uhfoundation.org/', 'sidebar-media', leadImage={src: '/media/units/pols/sidebar/side-01.webp', width: 600, height: 400, alt: ''}) %}
+<h1>Support POLS</h1>
+<p>The <a href="https://give.uhfoundation.org/campaigns/63435/donations/new?utm_medium=rdirect&amp;designation_id=12044904">Political Science Department Fund</a> is used to sponsor activities such as colloquia and educational/programming events. Contributions also support special funds designed to assist undergraduate and graduate students in their quest for knowledge. <em>Contributions of any size are sincerely appreciated.</em>
 </p>
-	<h2>Additional Funds</h2>
+<hr>
+<h2>Additional Funds</h2>
 <ul>
 <li><a href="https://giving.uhfoundation.org/funds/12450704">Jorge Fernandes Memorial Fellowship and Award</a>
 . This award was created in honor of its namesake, a beloved graduate student, and a talented scholar. Awarded irregularly to an exceptionally promising graduate student to support the completion of their dissertation.</li>
@@ -19,4 +22,6 @@ permalink: "/support-pols.html"
 . This fund was created in honor of Professor Emeritus Norman Meller, the Department's expert in Pacific Island Studies. Awarded for meritorious academic achievement, especially for progress in the PhD program.</li>
 <li><a href="https://giving.uhfoundation.org/funds/12486902">Glendon Schubert and James Neal Schubert Political Science Endowed Scholarship</a>
 . This scholarship was created in honor of the Department's most creative and influential political scientist of the mid-20th century and is awarded to a graduate student specializing in public law, law and society, or biopolitics.</li>
-</ul></div><aside class="col-12 col-lg-3 sidebar-resources" aria-label="UH Foundation"><a href="https://www.uhfoundation.org/"><img class="sidebar-media" src="{{ '/media/branding/logos/uhf.svg' | url }}" alt="University of Hawaiʻi Foundation"></a></aside></div></div></div>
+</ul>
+{% endcall %}
+</div></div>
