@@ -1,7 +1,8 @@
 ---
 layout: shell.njk
 title: "Political Theory"
-description: "This will be the meta description."
+description: "Explore Political Theory through philosophical, historical, literary, feminist, and Indigenous perspectives, with related courses and faculty."
+coreFaculty: ["kathy-ferguson", "jonathan-goldberg-hiller", "jairus-grove", "lawrence-nitz", "jamaica-osorio", "debbie-samaniego", "nicole-sunday-grove"]
 permalink: "/about/specializations/political-theory.html"
 ---
 <div class="page-section">
@@ -9,7 +10,7 @@ permalink: "/about/specializations/political-theory.html"
 <div class="row gx-0 gx-sm-5 gx-lg-5">
 <div class="col-12">
 <h1>Political Theory</h1>
-<p>As a departmental specialization, our offerings in political theory feature philosophical, literary, historical, and critical approaches. Drawing from diverse disciplines, including literature, geography, architecture, physics, history, film, +philosophy, and law, to interpret and challenge the conventions that sustain the political world, we deploy perspectives from feminist, queer, indigenous, and critical race theory, among others.</p>
+<p>As a departmental specialization, our offerings in political theory feature philosophical, literary, historical, and critical approaches. Drawing from diverse disciplines, including literature, geography, architecture, physics, history, film, philosophy, and law, to interpret and challenge the conventions that sustain the political world, we deploy perspectives from feminist, queer, Indigenous, and critical race theory, among others.</p>
 </div>
 </div>
 </div>
@@ -18,25 +19,8 @@ permalink: "/about/specializations/political-theory.html"
 <div class="container content-section">
 <div class="row gx-0 gx-sm-5 gx-lg-5">
 <div class="col-12">
-<h2>Core Faculty</h2>
-<ul>
-<li><a href="{{ '/faculty/kathy-ferguson.html' | url }}">Kathy Ferguson</a>
-</li>
-<li><a href="{{ '/faculty/jonathan-goldberg-hiller.html' | url }}">Jonathan Goldberg-Hiller</a>
-</li>
-<li><a href="{{ '/faculty/jairus-grove.html' | url }}">Jairus Grove</a>
-</li>
-<li><a href="https://politicalscience.manoa.hawaii.edu/nicole-grove/">Nicole Grove</a>
-</li>
-<li><a href="{{ '/faculty/lawrence-nitz.html' | url }}">Lawrence Nitz</a>
-</li>
-<li><a href="{{ '/faculty/jamaica-osorio.html' | url }}">Jamaica Heolimeleikalani Osorio</a>
-</li>
-<li><a href="{{ '/faculty/debbie-samaniego.html' | url }}">Debbie Samaniego</a>
-</li>
-</ul>
 <h2>Related Courses</h2>
-<ul>
+<ul class="list-columns-two">
 <li>POLS 190: Media and Politics</li>
 <li>POLS 200: Reading and Writing Politics</li>
 <li>POLS 335A: History of Political Thought</li>
@@ -52,6 +36,17 @@ permalink: "/about/specializations/political-theory.html"
 <li>POLS 615 (Alpha): Topics in Political Thought</li>
 <li>POLS 710: Seminar: Political Thought</li>
 </ul>
+</div>
+</div>
+</div>
+</div>
+<div class="page-section">
+<div class="container content-section">
+<div class="row gx-0 gx-sm-5 gx-lg-5">
+<div class="col-12">
+{% set portraitCardGrid = true %}
+{% set directoryPeople = faculty | peopleBySlugs(coreFaculty) %}
+{% include "layouts/profiles/people-grid.njk" %}
 </div>
 </div>
 </div>

@@ -1,7 +1,8 @@
 ---
 layout: shell.njk
 title: "Comparative Politics"
-description: "This will be the meta description."
+description: "Explore Comparative Politics through power, democracy, development, identity, and social movements, with related courses and faculty."
+coreFaculty: ["katharina-heyer", "ehito-kimura", "sankaran-krishna", "kate-zhou"]
 permalink: "/about/specializations/comparative-politics.html"
 ---
 <div class="page-section">
@@ -18,19 +19,8 @@ permalink: "/about/specializations/comparative-politics.html"
 <div class="container content-section">
 <div class="row gx-0 gx-sm-5 gx-lg-5">
 <div class="col-12">
-	<h2>Core Faculty</h2>
-<ul>
-<li><a href="{{ '/faculty/katharina-heyer.html' | url }}">Katharina Heyer</a>
-</li>
-<li><a href="{{ '/faculty/ehito-kimura.html' | url }}">Ehito Kimura</a>
-</li>
-<li><a href="{{ '/faculty/sankaran-krishna.html' | url }}">Sankaran Krishna</a>
-</li>
-<li><a href="{{ '/faculty/kate-zhou.html' | url }}">Kate Zhou</a>
-</li>
-</ul>
 <h2>Related Courses</h2>
-<ul>
+<ul class="list-columns-two">
 <li>POLS 305: Global Politics/Comparative</li>
 <li>POLS 306: Comparative Politics of Developing Countries</li>
 <li>POLS 307 (Alpha): Topics in Comparative Politics: Country/Regional</li>
@@ -39,7 +29,18 @@ permalink: "/about/specializations/comparative-politics.html"
 <li>POLS 740: Seminar: Comparative Government and Politics</li>
 <li>POLS 780: Seminar: Politics of Regions</li>
 </ul>
-		The Comparative and Asia Working Group (faculty and graduate student members) meet to discuss their research in progress.
+The Comparative and Asia Working Group (faculty and graduate student members) meet to discuss their research in progress.
+</div>
+</div>
+</div>
+</div>
+<div class="page-section">
+<div class="container content-section">
+<div class="row gx-0 gx-sm-5 gx-lg-5">
+<div class="col-12">
+{% set portraitCardGrid = true %}
+{% set directoryPeople = faculty | peopleBySlugs(coreFaculty) %}
+{% include "layouts/profiles/people-grid.njk" %}
 </div>
 </div>
 </div>
